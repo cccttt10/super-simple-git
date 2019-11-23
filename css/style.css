@@ -1,10 +1,11 @@
 body {
     background: #fff;
-    font-family: Georgia, Times New Roman, Times, serif;
+    font-family: 'Poppins', Georgia, Times New Roman, Times, serif;
     font-size: 30px;
     text-align: center;
     margin: 0;
     padding: 0;
+    font-weight: 200;
 }
 
 h1 {
