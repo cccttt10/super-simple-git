@@ -176,58 +176,52 @@
             <code>git log --help</code><br />
         </p>
     </div>
-    <a name="checkout-replace"></a>
+
     <div class="scrollblock block-checkout-replace">
-        <h2>replace local changes</h2>
+        <h2>discard changes</h2>
         <p>
-            In case you did something wrong, which for sure never happens ;), you can replace local changes using the
-            command<br />
-            <code>git checkout -- &lt;filename&gt;</code><br />
-            this replaces the changes in your working tree with the last content in HEAD. Changes already added to the
-            index, as well as new files, will be kept.
+            <b>warning</b> <br />
+            dangerous commands <br />
+            exercise caution
         </p>
+        <br /><br />
         <p>
-            If you instead want to drop all your local changes and commits, fetch the latest history from the server and
-            point your local master branch at it like this<br />
+            in case you messed up <br />
+            which for sure never happens <br /> 
+            you can discard local changes with <br />
+            <code>git checkout -- &lt;filename&gt;</code><br />
+            this resets your working tree to <b>HEAD</b> <br />
+            changes already added to <b>Index</b> <br />
+            as well as untracked (i.e. new) files <br /> 
+            will be kept
+        </p>
+        <br /><br />
+        <p>
+            if you want to drop ALL your local changes AND commits <br />
+            fetch the latest history from the remote repo <br />
             <code>git fetch origin</code><br />
+            and point your master branch to your remote branch<br />
             <code>git reset --hard origin/master</code>
         </p>
     </div>
-    <a name="hints"></a>
-    <div class="scrollblock block-hints">
-        <h2>useful hints</h2>
-        <p>
-            built-in git GUI<br />
-            <code>gitk</code><br />
-            use colorful git output<br />
-            <code>git config color.ui true</code><br />
-            show log on just one line per commit<br />
-            <code>git config format.pretty oneline</code><br />
-            use interactive adding<br />
-            <code>git add -i</code>
-        </p>
-    </div>
-    <a name="resources"></a>
+    
     <div class="scrollblock block-resources">
         <h2>links & resources</h2>
         <h3>graphical clients</h3>
         <p>
             <ul>
-                <li><a href="http://gitx.laullon.com/">GitX (L) (OSX, open source)</a></li>
-                <li><a href="http://www.git-tower.com/">Tower (OSX)</a></li>
-                <li><a href="http://www.sourcetreeapp.com/">Source Tree (OSX & Windows, free)</a></li>
-                <li><a href="http://mac.github.com/">GitHub for Mac (OSX, free)</a></li>
-                <li><a href="https://itunes.apple.com/gb/app/gitbox/id403388357?mt=12">GitBox (OSX, App Store)</a></li>
+                <li><a href="https://www.sourcetreeapp.com">Sourcetree</a></li>
+                <li><a href="https://www.sublimemerge.com">Sublime Merge</a></li>
+                <li><a href="https://desktop.github.com">GitHub Desktop</a></li>
+                <li><a href="https://www.gitkraken.com">GitKraken</a></li>
             </ul>
         </p>
         <h3>guides</h3>
         <p>
             <ul>
-                <li><a href="http://book.git-scm.com/">Git Community Book</a></li>
-                <li><a href="http://progit.org/book/">Pro Git</a></li>
-                <li><a href="http://think-like-a-git.net/">Think like a git</a></li>
-                <li><a href="http://help.github.com/">GitHub Help</a></li>
-                <li><a href="http://marklodato.github.com/visual-git-guide/index-en.html">A Visual Git Guide</a></li>
+                <li><a href="https://git-scm.com/doc">Official Docs</a></li>
+                <li><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository">Atlassian Git Tutorial</a></li>
+                <li><a href="http://marklodato.github.com/visual-git-guide/index-en.html">A Visual Git Reference</a></li>
             </ul>
         </p>
     </div>
