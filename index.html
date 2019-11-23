@@ -66,7 +66,7 @@
             2. <code>Index</code> (aka <code>Staging Area</code>)<br />
             3. <code>HEAD</code> points to the last commit
         </p>
-        <img src="img/trees.png" alt="" />
+        <img src="img/trees.png" alt="trees" />
     </div>
 
     <div class="scrollblock block-add">
@@ -93,79 +93,86 @@
             <br /><br />
             if your local repo was not cloned from a remote repo <br />
             and you want to connect your local repo to a remote repo <br />
-            you need to add a <b>remote</b> by executing <br />
+            you need to add a <b>remote</b> <br />
             <code>git remote add origin &lt;url&gt;</code><br />
             note <b>"origin"</b> is just a name and you can call it anything <br />
             now you can push changes to your remote repo<br />
 
         </p>
     </div>
-    <a name="branching"></a>
+
     <div class="scrollblock block-branching">
         <h2>branching</h2>
         <p>
-            Branches are used to develop features isolated from each other. The <i>master</i> branch is the "default"
-            branch when you create a repository. Use other branches for development and merge them back to the master
-            branch upon completion.
+            use branches to develop features isolated from each other <br />
+            <b>master</b> is git's default branch when you create a repo <br />
+            use other branches when you develop features <br />
+            then merge them back to master upon completion
         </p>
-        <img src="img/branches.png" alt="" />
+        <img src="img/branches.png" alt="branches" />
         <p>
-            create a new branch named "feature_x" and switch to it using<br />
-            <code>git checkout -b feature_x</code><br />
-            switch back to master<br />
-            <code>git checkout master</code><br />
-            and delete the branch again<br />
+            create a new branch named "feature" and switch to it <br />
+            <code>git checkout -b feature</code> <br />
+            switch back to master <br />
+            <code>git checkout master</code> <br />
+            delete the feature branch <br />
             <code>git branch -d feature_x</code><br />
-            a branch is <i>not available to others</i> unless you push the branch to your remote repository<br />
+            a local branch is not available to other people <br />
+            unless you push the branch to your remote repo<br />
             <code>git push origin &lt;branch&gt;</code>
         </p>
     </div>
-    <a name="update"></a>
+
     <div class="scrollblock block-merging">
         <h2>update &amp; merge</h2>
         <p>
-            to update your local repository to the newest commit, execute <br />
+            to sync your local repo with your remote repo, execute <br />
             <code>git pull</code><br />
-            in your working directory to <i>fetch</i> and <i>merge</i> remote changes.<br />
-            to merge another branch into your active branch (e.g. master), use<br />
+            the <b>pull</b> command will <b>fetch</b> and <b>merge</b> remote changes <br />
+            to merge another branch into the active branch, use<br />
             <code>git merge &lt;branch&gt;</code><br />
-            in both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in
-            <i>conflicts</i>.
-            You are responsible to merge those <i>conflicts</i>
-            manually by editing the files shown by git. After changing, you need to mark them as merged with<br />
+            <br /><br />
+            in both cases git tries to auto-merge changes <br />
+            unfortunately, this is not always possible <br />
+            and could result in <b>conflicts</b> <br />
+            when conflicts arise, you must resolve them manually <br />
+            by editing the files shown by git <br />
+            after resolving, you need to mark your edits as merged with<br />
             <code>git add &lt;filename&gt;</code><br />
-            before merging changes, you can also preview them by using<br />
+            <br /><br />
+            before merging changes, you can also preview them<br />
             <code>git diff &lt;source_branch&gt; &lt;target_branch&gt;</code>
         </p>
     </div>
-    <a name="tagging"></a>
+
     <div class="scrollblock block-tagging">
         <h2>tagging</h2>
         <p>
-            it's recommended to create tags for software releases. this is a known concept, which also exists in SVN.
-            You can create a new tag named <i>1.0.0</i> by executing<br />
+            it's standard practice to tag software releases <br />
+            create a new tag named <b>1.0.0</b> <br />
             <code>git tag 1.0.0 1b2e1d63ff</code><br />
-            the <i>1b2e1d63ff</i> stands for the first 10 characters of the commit id you want to reference with your
-            tag. You can get the commit id by looking at the... <br />
+            where <b>1b2e1d63ff</b> stands for <br />
+            the first 10 characters of the commit id <br />
+            that you want to tag <br />
+            you can get the commit id by looking at the ... <br />
         </p>
     </div>
-    <a name="log"></a>
+
     <div class="scrollblock block-log">
         <h2>log</h2>
         <p>
-            in its simplest form, you can study repository history using..
+            study repo history using <br />
             <code>git log</code><br />
-            You can add a lot of parameters to make the log look like what you want. To see only the commits of a
-            certain author:<br />
-            <code>git log --author=bob</code><br />
-            To see a very compressed log where each commit is one line:<br />
+            you can add lots of parameters to the <code>log</code> command <br />
+            e.g. see only the commits authored by chuntong:<br />
+            <code>git log --author=chuntong</code><br />
+            see a compressed log where each commit is one line:<br />
             <code>git log --pretty=oneline</code><br />
-            Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and
-            branches: <br />
+            see a tree-like, decorated graph of all the branches: <br />
             <code>git log --graph --oneline --decorate --all</code><br />
-            See only which files have changed: <br />
+            see only which files have changed: <br />
             <code>git log --name-status</code><br />
-            These are just a few of the possible parameters you can use. For more, see
+            for more, see <br />
             <code>git log --help</code><br />
         </p>
     </div>
