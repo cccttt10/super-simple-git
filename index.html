@@ -13,33 +13,36 @@
 <body>
     <div class="scrollblock block-title">
         <h1>git - no bs</h1>
-        <p>a super simple guide for getting started with git. absolutely no BS :)</p>
+        <p> super simple guide <br />
+            for getting started with git <br />
+            absolutely no BS </p>
         <p class="meta">
             by <a href="http://cgao.info">Chuntong Gao</a> <br />
             credits to <a href="http://www.twitter.com/rogerdudler">Roger Dudler</a> <br />
-            please report issues on <a href="https://github.com/chuntonggao/git-no-bs/issues">GitHub</a>
+            report issues on <a href="https://github.com/chuntonggao/git-no-bs/issues">GitHub</a>
         </p>
     </div>
 
     <div class="scrollblock block-setup">
-        <h2>setup</h2>
+        <h2>download</h2>
         <p>
-            <a href="http://git-scm.com/download/mac">download git for macOS</a>
+            <a href="http://git-scm.com/download/mac">macOS</a>
         </p>
         <p>
-            <a href="http://msysgit.github.io/">download git for Windows</a>
+            <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">Linux</a>
         </p>
         <p>
-            <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">download git for Linux</a>
+            <a href="http://msysgit.github.io/">Windows</a>
         </p>
     </div>
 
     <div class="scrollblock block-create">
         <h2>create a new repo</h2>
         <p>
-            create a new directory, open and execute<br />
-            <code>git init</code><br />
-            to create a new git repo
+            create a new directory <br />
+            <code>cd</code> into the directory <br />
+            create a new git repo by executing <br />
+            <code>git init</code>
         </p>
     </div>
 
@@ -47,48 +50,52 @@
         <h2>checkout a repo</h2>
         <p>
             create a copy for a local repo by executing<br />
-            <code>git clone /path/to/repository</code><br />
-            when using a remote server, execute<br />
-            <code>git clone username@host:/path/to/repository</code>
+            <code>git clone &lt;path&gt;</code><br />
+            when cloning from GitHub, execute<br />
+            <code>git clone &lt;url&gt;</code>
         </p>
     </div>
 
     <div class="scrollblock block-trees">
         <h2>workflow</h2>
         <p>
-            your local repo has three "trees" maintained by git behind the scene <br />
-            the first one is your <code>Working Directory</code> which contains the actual files that you see <br />
-            the second one is the <code>Index</code> (aka <code>Staging Area</code>) <br />
-            the third one is the <code>HEAD</code> which points to the last commit
+            your local repo has 3 "trees" <br />
+            which are maintained by git behind the scene <br />
+            1. <code>Working Directory</code> contains the actual files<br />
+            2. <code>Index</code> (aka <code>Staging Area</code>)<br />
+            3. <code>HEAD</code> points to the last commit
         </p>
         <img src="img/trees.png" alt="" />
     </div>
 
-    <a name="add"></a>
     <div class="scrollblock block-add">
-        <h2>add &amp; commit</h2>
+        <h2>add &amp; commit changes</h2>
         <p>
-            You can propose changes (add it to the <b>Index</b>) using<br />
+            propose changes (i.e. add to <b>Index</b>) using<br />
             <code>git add &lt;filename&gt;</code><br />
             <code>git add *</code><br />
-            This is the first step in the basic git workflow. To actually commit these changes use<br />
-            <code>git commit -m "Commit message"</code><br />
-            Now the file is committed to the <b>HEAD</b>, but not in your remote repository yet.
+            this is the first step in the basic git workflow <br />
+            to commit these changes, execute<br />
+            <code>git commit -m "commit message"</code> <br />
+            now the changes are committed to <b>HEAD</b> <br />
+            but not pushed to your remote repo yet
         </p>
     </div>
-    <a name="push"></a>
+
     <div class="scrollblock block-remote">
-        <h2>pushing changes</h2>
+        <h2>push changes</h2>
         <p>
-            Your changes are now in the <b>HEAD</b> of your local working copy. To send those changes to your remote
-            repository, execute <br />
-            <code>git push origin master</code><br />
-            Change <i>master</i> to whatever branch you want to push your changes to.
+            your changes are now in <b>HEAD</b> of your local repo <br />
+            to upload these changes to your remote repo, execute <br />
+            <code>git push origin master</code> <br />
+            Change <b>master</b> to whatever branch you want to push your changes to
             <br /><br />
-            If you have not cloned an existing repository and want to connect your repository to a remote server, you
-            need to add it with<br />
-            <code>git remote add origin &lt;server&gt;</code><br />
-            Now you are able to push your changes to the selected remote server<br />
+            if your local repo was not cloned from a remote repo <br />
+            and you want to connect your local repo to a remote repo <br />
+            you need to add a <b>remote</b> by executing <br />
+            <code>git remote add origin &lt;url&gt;</code><br />
+            note <b>"origin"</b> is just a name and you can call it anything <br />
+            now you can push changes to your remote repo<br />
 
         </p>
     </div>
