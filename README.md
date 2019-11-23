@@ -1,7 +1,7 @@
-# Git Guide
+# Super Simple Git
 
-Super simple guide for getting started with git. Simply no BS.
+Super simple guide for getting started with git:
 
-https://chuntonggao.github.io/git-no-bs/
+https://chuntonggao.github.io/super-simple-git/
 
 ![banner](./img/banner.png)
